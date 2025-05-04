@@ -18,6 +18,7 @@
   --breakpoint-xs: 480px;
 
   --background-image-hero-pattern: url("/hero-bg.png");
+  --welcome-page-hero-pattern: url("/midnight.png");
 }
 
 @layer base {
@@ -140,6 +141,14 @@
       @apply text-gray-100 font-medium text-base;
     }
   }
+
+  .welcome-background {
+    background-image: var(--welcome-page-hero-pattern);  /* Arka plan resmini kullanır */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;  /* Sayfa boyutunda görüntülenmesini sağlar */
+  }
+  
 }
 
 @utility text-gradient {
