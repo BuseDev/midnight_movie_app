@@ -17,7 +17,7 @@
 
   --breakpoint-xs: 480px;
 
-  --background-image-hero-pattern: url("/hero-bg.png");
+  
   --welcome-page-hero-pattern: url("/midnight.png");
 }
 
@@ -50,10 +50,6 @@
 }
 
 @layer components {
-  .pattern {
-    @apply bg-hero-pattern w-screen h-screen bg-center bg-cover absolute z-0;
-  }
-
   .wrapper {
     @apply px-5 py-12 xs:p-10 max-w-7xl mx-auto flex flex-col relative z-10;
   }
@@ -143,16 +139,33 @@
   }
 
   .welcome-background {
-    background-image: var(--welcome-page-hero-pattern);  /* Arka plan resmini kullanır */
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;  /* Sayfa boyutunda görüntülenmesini sağlar */
+    @apply bg-[image:var(--welcome-page-hero-pattern)] bg-cover bg-center min-h-screen;
+  }
+
+  .logo-welcome{
+    @apply mt-5 ml-5 w-[350px] h-auto;
+  }
+
+  .welcome-txt{
+    @apply text-[#f0f8ff] ml-[60px] mt-[100px] font-bold text-3xl md:text-5xl leading-snug;
+  }
+
+  .welcome-underline {
+    @apply w-[80px] h-[4px] bg-[#C33333] mt-[15px] ml-[60px] rounded-sm;
+  }
+  
+  .welcome-desc {
+    @apply max-w-[600px] ml-[60px] mt-[30px] mb-[30px] text-base text-[#ccc];
+  }
+  
+  .welcome-button {
+    @apply bg-transparent border-2 border-[#C33333] text-[#C33333] py-2 px-5 rounded-full cursor-pointer mt-[15px] ml-[60px] transition-all duration-300 hover:bg-[#C33333] hover:text-white;
   }
   
 }
 
 @utility text-gradient {
-  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
+  @apply bg-linear-to-r from-[#f0f8ff] to-[#C33333] bg-clip-text text-transparent;
 }
 
 @utility fancy-text {
