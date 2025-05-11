@@ -90,9 +90,10 @@ function Welcome() {
     <main>
       <div className="pattern" />
 
+      <img className="logo-welcome" src="/logo.png" alt="midnight" />
+
       <div className="wrapper">
         <header>
-          <img src="./hero.png" alt="Hero Banner"></img>
           <h1>Find <span className="text-gradient">Movies</span> You'll Enjoy Without the Hassle</h1>
 
 
