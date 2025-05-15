@@ -25,7 +25,7 @@
   body {
     font-family: "DM Sans", serif;
     font-optical-sizing: auto;
-    background: #030014;
+    background: #0c0c0c;
   }
 
   h1 {
@@ -155,12 +155,14 @@
   }
   
   .welcome-desc {
-    @apply max-w-[600px] ml-[60px] mt-[30px] mb-[30px] text-base text-[#ccc];
-  }
+    @apply max-w-[600px] ml-[60px] mt-[30px] mb-[30px] text-lg md:text-xl text-[#ccc];
+}
+
   
   .welcome-button {
     @apply bg-transparent border-2 border-[#C33333] text-[#C33333] py-2 px-5 rounded-full cursor-pointer mt-[15px] ml-[60px] transition-all duration-300 hover:bg-[#C33333] hover:text-white;
   }
+  
   
 }
 
